@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Chamados</title>
+    <script src="js/filtros.js"></script>
+</head>
+<body>
+    <h1>Gerenciamento de Chamados</h1>
+
+    <label for="filtroStatus">Filtrar por Status:</label>
+    <select id="filtroStatus" onchange="aplicarFiltro();">
+        <option value="">Todos</option>
+        <option value="aberto">Aberto</option>
+        <option value="em andamento">Em andamento</option>
+        <option value="resolvido">Resolvido</option>
+    </select>
+
+    <label for="filtroCriticidade">Filtrar por Criticidade:</label>
+    <select id="filtroCriticidade" onchange="aplicarFiltro();">
+        <option value="">Todas</option>
+        <option value="baixa">Baixa</option>
+        <option value="media">Média</option>
+        <option value="alta">Alta</option>
+    </select>
+
+    <table border="1" id="tabelaChamados">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Descrição</th>
+                <th>Criticidade</th>
+                <th>Status</th>
+                <th>Data de Abertura</th>
+                <th>Colaborador</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os dados serão carregados dinamicamente aqui -->
+        </tbody>
+    </table>
+    <br>
+    <a href="Clientes.html" id="sair-button"><button>Sair</button></a>
+    <a href="Editar_chamado.html" id="sair-button"><button>Editar Chamados</button></a>
+</body>
+</html>
